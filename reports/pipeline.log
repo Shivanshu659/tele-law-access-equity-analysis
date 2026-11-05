@@ -1,0 +1,148 @@
+00:35:07  INFO      main – ============================================================
+00:35:07  INFO      main – Tele-Law Access Equity Analysis – Pipeline Starting
+00:35:07  INFO      main – ============================================================
+00:35:07  INFO      main – [DEMO] Generating synthetic Tele-Law dataset …
+00:35:07  INFO      src.data_ingestion – Dataset cleaned: 300 rows × 19 columns
+00:35:07  INFO      main – Dataset ready: 300 rows × 19 columns
+00:35:07  INFO      main – Running analytical pipeline …
+00:35:07  INFO      src.analysis – Starting full analysis pipeline …
+00:35:07  INFO      src.analysis – Gender analysis complete. Skewed districts: 88
+00:35:07  INFO      src.analysis – Caste analysis complete. Underserved districts: 159 | Gini: 0.0923
+00:35:07  INFO      src.analysis – Regional analysis complete. States: 15 | Districts: 75 | Outliers: 2
+00:35:07  INFO      src.analysis – Equity scores computed for 75 districts
+00:35:07  INFO      src.analysis – Correlation matrix computed (9 × 9)
+00:35:07  INFO      src.analysis – Full analysis pipeline complete.
+00:35:07  INFO      main – AI insights skipped (--no-ai flag).
+00:35:07  INFO      main – Generating charts …
+00:35:30  INFO      main – Generating HTML equity report …
+00:35:30  INFO      main – ============================================================
+00:35:30  INFO      main – ============================================================
+00:36:17  INFO      main – ============================================================
+00:36:17  INFO      main – Tele-Law Access Equity Analysis – Pipeline Starting
+00:36:17  INFO      main – ============================================================
+00:36:17  INFO      main – [DEMO] Generating synthetic Tele-Law dataset …
+00:36:17  INFO      src.data_ingestion – Dataset cleaned: 300 rows × 19 columns
+00:36:17  INFO      main – Dataset ready: 300 rows × 19 columns
+00:36:17  INFO      main – Running analytical pipeline …
+00:36:17  INFO      src.analysis – Starting full analysis pipeline …
+00:36:17  INFO      src.analysis – Gender analysis complete. Skewed districts: 88
+00:36:17  INFO      src.analysis – Caste analysis complete. Underserved districts: 159 | Gini: 0.0923
+00:36:17  INFO      src.analysis – Regional analysis complete. States: 15 | Districts: 75 | Outliers: 2
+00:36:17  INFO      src.analysis – Equity scores computed for 75 districts
+00:36:17  INFO      src.analysis – Correlation matrix computed (9 × 9)
+00:36:17  INFO      src.analysis – Full analysis pipeline complete.
+00:36:17  INFO      main – AI insights skipped (--no-ai flag).
+00:36:17  INFO      main – Generating charts …
+00:36:18  INFO      src.visualisation – Chart saved -> reports\charts\gender_pie.png
+00:36:19  INFO      src.visualisation – Chart saved -> reports\charts\gender_trend.png
+00:36:22  INFO      src.visualisation – Chart saved -> reports\charts\caste_state_bar.png
+00:36:26  INFO      src.visualisation – Chart saved -> reports\charts\marginalized_heatmap.png
+00:36:32  INFO      src.visualisation – Chart saved -> reports\charts\cases_per_csc.png
+00:36:33  INFO      src.visualisation – Chart saved -> reports\charts\advice_rate.png
+00:36:37  INFO      src.visualisation – Chart saved -> reports\charts\equity_scores.png
+00:36:40  INFO      src.visualisation – Chart saved -> reports\charts\correlation.png
+00:36:42  INFO      src.visualisation – Chart saved -> reports\charts\yearly_trend.png
+00:36:42  INFO      main – Generating HTML equity report …
+00:36:42  INFO      main – ============================================================
+00:36:42  INFO      main – Pipeline complete. Report -> C:\Users\cw\Desktop\Tele-Law Access Equity Analysis\reports\equity_report.html
+00:36:42  INFO      main – ============================================================
+00:37:09  INFO      main – ============================================================
+00:37:09  INFO      main – Tele-Law Access Equity Analysis – Pipeline Starting
+00:37:09  INFO      main – ============================================================
+00:37:09  INFO      main – [DEMO] Generating synthetic Tele-Law dataset …
+00:37:09  INFO      src.data_ingestion – Dataset cleaned: 300 rows × 19 columns
+00:37:09  INFO      main – Dataset ready: 300 rows × 19 columns
+00:37:09  INFO      main – Running analytical pipeline …
+00:37:09  INFO      src.analysis – Starting full analysis pipeline …
+00:37:09  INFO      src.analysis – Gender analysis complete. Skewed districts: 88
+00:37:09  INFO      src.analysis – Caste analysis complete. Underserved districts: 159 | Gini: 0.0923
+00:37:09  INFO      src.analysis – Regional analysis complete. States: 15 | Districts: 75 | Outliers: 2
+00:37:09  INFO      src.analysis – Equity scores computed for 75 districts
+00:37:09  INFO      src.analysis – Correlation matrix computed (9 × 9)
+00:37:09  INFO      src.analysis – Full analysis pipeline complete.
+00:37:09  INFO      main – AI insights skipped (--no-ai flag).
+00:37:09  INFO      main – Generating charts …
+00:37:10  INFO      src.visualisation – Chart saved -> reports\charts\gender_pie.png
+00:37:11  INFO      src.visualisation – Chart saved -> reports\charts\gender_trend.png
+00:37:13  INFO      src.visualisation – Chart saved -> reports\charts\caste_state_bar.png
+00:37:16  INFO      src.visualisation – Chart saved -> reports\charts\marginalized_heatmap.png
+00:37:21  INFO      src.visualisation – Chart saved -> reports\charts\cases_per_csc.png
+00:37:23  INFO      src.visualisation – Chart saved -> reports\charts\advice_rate.png
+00:37:27  INFO      src.visualisation – Chart saved -> reports\charts\equity_scores.png
+00:37:29  INFO      src.visualisation – Chart saved -> reports\charts\correlation.png
+00:37:31  INFO      src.visualisation – Chart saved -> reports\charts\yearly_trend.png
+00:37:31  INFO      main – Generating HTML equity report …
+00:37:31  INFO      src.visualisation – HTML report saved -> reports\equity_report.html
+00:37:31  INFO      main – ============================================================
+00:37:31  INFO      main – Pipeline complete. Report -> C:\Users\cw\Desktop\Tele-Law Access Equity Analysis\reports\equity_report.html
+00:37:31  INFO      main – ============================================================
+01:10:40  INFO      main – ============================================================
+01:10:40  INFO      main – Tele-Law Access Equity Analysis – Pipeline Starting
+01:10:40  INFO      main – ============================================================
+01:10:40  INFO      main – [DEMO] Generating synthetic Tele-Law dataset …
+01:10:40  INFO      src.data_ingestion – Dataset cleaned: 300 rows × 19 columns
+01:10:40  INFO      main – Dataset ready: 300 rows × 19 columns
+01:10:40  INFO      main – Running analytical pipeline …
+01:10:40  INFO      src.analysis – Starting full analysis pipeline …
+01:10:41  INFO      src.analysis – Gender analysis complete. Skewed districts: 88
+01:10:41  INFO      src.analysis – Caste analysis complete. Underserved districts: 159 | Gini: 0.0923
+01:10:41  INFO      src.analysis – Regional analysis complete. States: 15 | Districts: 75 | Outliers: 2
+01:10:41  INFO      src.analysis – Equity scores computed for 75 districts
+01:10:41  INFO      src.analysis – Correlation matrix computed (9 × 9)
+01:10:41  INFO      src.analysis – Full analysis pipeline complete.
+01:10:41  INFO      main – Requesting IBM Granite AI insights …
+01:10:41  INFO      src.granite_ai – Requesting Granite gender insight …
+01:10:45  WARNING   src.granite_ai – Skipped gender_insight: 404 Client Error: Not Found for url: https://us-south.ml.cloud.ibm.com/ml/v1/text/generation?version=2023-05-29
+01:10:45  INFO      src.granite_ai – Requesting Granite caste insight …
+01:10:46  WARNING   src.granite_ai – Skipped caste_insight: 404 Client Error: Not Found for url: https://us-south.ml.cloud.ibm.com/ml/v1/text/generation?version=2023-05-29
+01:10:46  INFO      src.granite_ai – Requesting Granite regional insight …
+01:10:48  WARNING   src.granite_ai – Skipped regional_insight: 404 Client Error: Not Found for url: https://us-south.ml.cloud.ibm.com/ml/v1/text/generation?version=2023-05-29
+01:10:48  INFO      src.granite_ai – Requesting Granite executive summary …
+01:11:49  WARNING   src.granite_ai – Skipped executive_summary: HTTPSConnectionPool(host='us-south.ml.cloud.ibm.com', port=443): Read timed out. (read timeout=60)
+01:11:49  INFO      main – Generating charts …
+01:11:51  INFO      src.visualisation – Chart saved -> reports\charts\gender_pie.png
+01:11:56  INFO      src.visualisation – Chart saved -> reports\charts\gender_trend.png
+01:12:00  INFO      src.visualisation – Chart saved -> reports\charts\caste_state_bar.png
+01:12:05  INFO      src.visualisation – Chart saved -> reports\charts\marginalized_heatmap.png
+01:12:14  INFO      src.visualisation – Chart saved -> reports\charts\cases_per_csc.png
+01:12:16  INFO      src.visualisation – Chart saved -> reports\charts\advice_rate.png
+01:12:32  INFO      src.visualisation – Chart saved -> reports\charts\equity_scores.png
+01:12:43  INFO      src.visualisation – Chart saved -> reports\charts\correlation.png
+01:12:47  INFO      src.visualisation – Chart saved -> reports\charts\yearly_trend.png
+01:12:47  INFO      main – Generating HTML equity report …
+01:12:47  INFO      src.visualisation – HTML report saved -> reports\equity_report.html
+01:12:47  INFO      main – ============================================================
+01:12:47  INFO      main – Pipeline complete. Report -> C:\Users\cw\Desktop\Tele-Law Access Equity Analysis\reports\equity_report.html
+01:12:47  INFO      main – ============================================================
+01:34:33  INFO      src.data_ingestion – Dataset cleaned: 300 rows × 19 columns
+01:34:33  INFO      src.analysis – Starting full analysis pipeline …
+01:34:33  INFO      src.analysis – Gender analysis complete. Skewed districts: 88
+01:34:33  INFO      src.analysis – Caste analysis complete. Underserved districts: 159 | Gini: 0.0923
+01:34:33  INFO      src.analysis – Regional analysis complete. States: 15 | Districts: 75 | Outliers: 2
+01:34:34  INFO      src.analysis – Equity scores computed for 75 districts
+01:34:34  INFO      src.analysis – Correlation matrix computed (9 × 9)
+01:34:34  INFO      src.analysis – Full analysis pipeline complete.
+01:43:27  INFO      src.data_ingestion – Dataset cleaned: 300 rows × 19 columns
+01:43:27  INFO      src.analysis – Starting full analysis pipeline …
+01:43:27  INFO      src.analysis – Gender analysis complete. Skewed districts: 88
+01:43:27  INFO      src.analysis – Caste analysis complete. Underserved districts: 159 | Gini: 0.0923
+01:43:28  INFO      src.analysis – Regional analysis complete. States: 15 | Districts: 75 | Outliers: 2
+01:43:28  INFO      src.analysis – Equity scores computed for 75 districts
+01:43:28  INFO      src.analysis – Correlation matrix computed (9 × 9)
+01:43:28  INFO      src.analysis – Full analysis pipeline complete.
+02:00:35  INFO      src.data_ingestion – Dataset cleaned: 300 rows × 19 columns
+02:00:35  INFO      src.analysis – Starting full analysis pipeline …
+02:00:35  INFO      src.analysis – Gender analysis complete. Skewed districts: 88
+02:00:35  INFO      src.analysis – Caste analysis complete. Underserved districts: 159 | Gini: 0.0923
+02:00:35  INFO      src.analysis – Regional analysis complete. States: 15 | Districts: 75 | Outliers: 2
+02:00:35  INFO      src.analysis – Equity scores computed for 75 districts
+02:00:35  INFO      src.analysis – Correlation matrix computed (9 × 9)
+02:00:35  INFO      src.analysis – Full analysis pipeline complete.
+02:02:31  INFO      src.granite_ai – Requesting Granite gender insight …
+02:02:36  WARNING   src.granite_ai – Skipped gender_insight: 404 Client Error: Not Found for url: https://us-south.ml.cloud.ibm.com/ml/v1/text/generation?version=2023-05-29
+02:02:36  INFO      src.granite_ai – Requesting Granite caste insight …
+02:02:37  WARNING   src.granite_ai – Skipped caste_insight: 404 Client Error: Not Found for url: https://us-south.ml.cloud.ibm.com/ml/v1/text/generation?version=2023-05-29
+02:02:37  INFO      src.granite_ai – Requesting Granite regional insight …
+02:02:40  WARNING   src.granite_ai – Skipped regional_insight: 404 Client Error: Not Found for url: https://us-south.ml.cloud.ibm.com/ml/v1/text/generation?version=2023-05-29
+02:02:40  INFO      src.granite_ai – Requesting Granite executive summary …
+02:02:42  WARNING   src.granite_ai – Skipped executive_summary: 404 Client Error: Not Found for url: https://us-south.ml.cloud.ibm.com/ml/v1/text/generation?version=2023-05-29
