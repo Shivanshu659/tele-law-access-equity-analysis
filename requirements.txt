@@ -1,28 +1,20 @@
-# ── Core data stack ──────────────────────────────────────────────────────────
-pandas>=2.2.3
-numpy>=1.26.4
-scipy>=1.11.0
+# ── Core data stack ───────────────────────────────────────────────────────────
+pandas==2.3.1
+numpy==2.3.2
+scipy==1.17.1
 
-# ── Visualisation ────────────────────────────────────────────────────────────
-matplotlib>=3.8.0
-seaborn>=0.13.0
-plotly>=5.18.0
+# ── Visualisation ─────────────────────────────────────────────────────────────
+matplotlib==3.11.1
+seaborn==0.13.2
+plotly==6.7.0
 
-# ── Streamlit Dashboard ──────────────────────────────────────────────────────
-streamlit>=1.30.0
+# ── Streamlit Dashboard ───────────────────────────────────────────────────────
+streamlit==1.57.0
 
-# ── IBM Cloud / watsonx.ai ───────────────────────────────────────────────────
+# ── IBM Cloud / watsonx.ai ────────────────────────────────────────────────────
 ibm-watson-machine-learning>=1.0.320
 ibm-cloud-sdk-core>=3.18.0
-ibm-platform-services>=0.32.0
 
-# ── HTTP & environment ───────────────────────────────────────────────────────
-requests>=2.31.0
-python-dotenv>=1.0.0
-
-# ── Jupyter (optional – for notebook exploration) ───────────────────────────
-jupyter>=1.0.0
-ipykernel>=6.26.0
-
-# ── Testing ──────────────────────────────────────────────────────────────────
-pytest>=7.4.0
+# ── HTTP & environment ────────────────────────────────────────────────────────
+requests==2.34.2
+python-dotenv==1.2.4

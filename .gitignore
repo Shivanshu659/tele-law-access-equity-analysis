@@ -1,0 +1,42 @@
+﻿# ── Secrets & credentials (NEVER commit) ─────────────────────────────────────
+.env
+.streamlit/secrets.toml
+
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ── Virtual environments ──────────────────────────────────────────────────────
+venv/
+.venv/
+env/
+ENV/
+
+# ── Data & generated outputs ──────────────────────────────────────────────────
+data/raw/
+data/processed/
+reports/charts/
+reports/pipeline.log
+reports/equity_report.html
+
+# ── Testing ───────────────────────────────────────────────────────────────────
+.pytest_cache/
+htmlcov/
+.coverage
+
+# ── Jupyter ───────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+notebooks/.ipynb_checkpoints/
+
+# ── OS / editor ───────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.vscode/
+*.swp

@@ -20,11 +20,27 @@ from dotenv import load_dotenv
 load_dotenv()
 logger = logging.getLogger(__name__)
 
+
+def _secret(key: str, default: str = "") -> str:
+    """
+    Read a secret from st.secrets (Streamlit Cloud) when available,
+    otherwise fall back to os.environ / .env.
+    """
+    try:
+        import streamlit as st
+        val = st.secrets.get(key)
+        if val:
+            return str(val)
+    except Exception:
+        pass
+    return os.getenv(key, default)
+
+
 # ── Config ────────────────────────────────────────────────────────────────────
-IBM_CLOUD_API_KEY  = os.getenv("IBM_CLOUD_API_KEY", "")
-WATSONX_URL        = os.getenv("WATSONX_URL", "https://us-south.ml.cloud.ibm.com")
-WATSONX_PROJECT_ID = os.getenv("WATSONX_PROJECT_ID", "")
-GRANITE_MODEL_ID   = os.getenv("GRANITE_MODEL_ID", "ibm/granite-13b-instruct-v2")
+IBM_CLOUD_API_KEY  = _secret("IBM_CLOUD_API_KEY")
+WATSONX_URL        = _secret("WATSONX_URL", "https://us-south.ml.cloud.ibm.com")
+WATSONX_PROJECT_ID = _secret("WATSONX_PROJECT_ID")
+GRANITE_MODEL_ID   = _secret("GRANITE_MODEL_ID", "ibm/granite-13b-instruct-v2")
 
 IAM_TOKEN_URL = "https://iam.cloud.ibm.com/identity/token"
 WATSONX_TEXT_URL = f"{WATSONX_URL}/ml/v1/text/generation?version=2023-05-29"

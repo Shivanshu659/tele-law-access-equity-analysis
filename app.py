@@ -998,19 +998,21 @@ with tab_ai:
 
     col_cfg1, col_cfg2, col_cfg3 = st.columns(3)
     with col_cfg1:
-        api_key_ok = bool(os.getenv("IBM_CLOUD_API_KEY","").replace("your_ibm_cloud_api_key_here",""))
+        _raw_key = st.secrets.get("IBM_CLOUD_API_KEY", os.getenv("IBM_CLOUD_API_KEY", ""))
+        api_key_ok = bool(str(_raw_key).replace("your_ibm_cloud_api_key_here", "").strip())
         st.markdown(
             f'<span class="badge {"badge-green" if api_key_ok else "badge-red"}">IBM_CLOUD_API_KEY: {"✓ Set" if api_key_ok else "✗ Not set"}</span>',
             unsafe_allow_html=True
         )
     with col_cfg2:
-        proj_ok = bool(os.getenv("WATSONX_PROJECT_ID","").replace("your_watsonx_project_id_here",""))
+        _raw_proj = st.secrets.get("WATSONX_PROJECT_ID", os.getenv("WATSONX_PROJECT_ID", ""))
+        proj_ok = bool(str(_raw_proj).replace("your_watsonx_project_id_here", "").strip())
         st.markdown(
             f'<span class="badge {"badge-green" if proj_ok else "badge-red"}">WATSONX_PROJECT_ID: {"✓ Set" if proj_ok else "✗ Not set"}</span>',
             unsafe_allow_html=True
         )
     with col_cfg3:
-        model = os.getenv("GRANITE_MODEL_ID","ibm/granite-13b-instruct-v2")
+        model = st.secrets.get("GRANITE_MODEL_ID", os.getenv("GRANITE_MODEL_ID", "ibm/granite-13b-instruct-v2"))
         st.markdown(f'<span class="badge badge-blue">Model: {model}</span>', unsafe_allow_html=True)
 
     st.markdown("<hr class='thin'>", unsafe_allow_html=True)
