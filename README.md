@@ -172,3 +172,105 @@ pytest tests/ -v
 - **pandas / numpy / scipy** — Data processing and statistics
 - **matplotlib / seaborn** — Visualisation
 - **data.gov.in Open API** — Source dataset
+
+---
+
+## 🚀 Deploy on Streamlit Community Cloud (Step-by-step)
+
+### Prerequisites
+- A **GitHub account** with this repository pushed to it
+- A **Streamlit Community Cloud account** → [share.streamlit.io](https://share.streamlit.io) (free)
+- Your **IBM Cloud API key** and **watsonx.ai Project ID** (from [cloud.ibm.com](https://cloud.ibm.com))
+
+---
+
+### Step 1 — Push the repo to GitHub
+
+```powershell
+# If you haven't added a remote yet:
+git remote add origin https://github.com/<your-username>/tele-law-equity.git
+git branch -M main
+git push -u origin main
+```
+
+Make sure `.env` and `.streamlit/secrets.toml` are **never pushed** — they are already in `.gitignore`.
+
+---
+
+### Step 2 — Create the app on Streamlit Cloud
+
+1. Go to **[share.streamlit.io](https://share.streamlit.io)** → **New app**
+2. Fill in:
+   | Field | Value |
+   |---|---|
+   | **Repository** | `<your-username>/tele-law-equity` |
+   | **Branch** | `main` |
+   | **Main file path** | `app.py` |
+3. Click **Advanced settings** → **Python version** → select `3.12`
+4. Click **Deploy** — Streamlit will install `requirements.txt` automatically
+
+---
+
+### Step 3 — Add Secrets (IBM credentials)
+
+After deploying, go to:  
+**App menu (⋮) → Settings → Secrets**
+
+Paste the following, replacing placeholder values with your real credentials:
+
+```toml
+IBM_CLOUD_API_KEY      = "your_ibm_cloud_api_key_here"
+WATSONX_PROJECT_ID     = "your_watsonx_project_id_here"
+WATSONX_URL            = "https://us-south.ml.cloud.ibm.com"
+GRANITE_MODEL_ID       = "ibm/granite-13b-instruct-v2"
+
+DATAGOV_RESOURCE_ID    = "your_datagov_resource_id_here"
+DATAGOV_API_KEY        = "your_datagov_api_key_here"
+DATAGOV_API_BASE_URL   = "https://api.data.gov.in/resource"
+
+EQUITY_THRESHOLD_PCT   = "70"
+MIN_CSC_COUNT          = "1"
+```
+
+> The app reads secrets from `st.secrets` on Streamlit Cloud and falls back to `.env` locally — no code changes needed.
+
+Click **Save** → the app will automatically reboot with the secrets loaded.
+
+---
+
+### Step 4 — Verify the deployment
+
+Once the app is live your public URL will be:
+```
+https://<your-username>-tele-law-equity-app-<hash>.streamlit.app
+```
+
+1. Open the URL — the dashboard loads in **Demo mode** (no credentials needed for the UI)
+2. Go to the **🤖 AI Insights** tab — the IBM Granite credential badges should show **✓ Set** (green) if secrets were saved correctly
+3. Toggle **Generate AI Insights** in the sidebar to trigger IBM Granite
+
+---
+
+### Step 5 — Load real Tele-Law data
+
+To use the actual dataset from data.gov.in:
+
+**Option A — API (automatic):**  
+Set `DATAGOV_RESOURCE_ID` and `DATAGOV_API_KEY` in secrets → select **"Fetch from API"** in the sidebar Data Source selector.
+
+**Option B — Upload CSV:**  
+Download the CSV from [data.gov.in](https://www.data.gov.in/resource/district-wise-tele-law-case-registration-and-advice-enabled-data-fy-2021-22-2024-25) → use the **"Upload CSV"** option in the sidebar.
+
+---
+
+### Troubleshooting
+
+| Issue | Fix |
+|---|---|
+| `ModuleNotFoundError` on deploy | Check `requirements.txt` is committed and all packages are listed |
+| App shows "Demo Data" only | Data source selector defaults to Demo — switch to Upload CSV or API |
+| IBM Granite badge shows ✗ red | Open App Settings → Secrets and verify keys are saved without quotes issues |
+| `Memory limit exceeded` | Upgrade to Streamlit Teams, or reduce dataset size in `_generate_demo_data()` |
+| Slow first load | Normal — Streamlit Cloud cold-starts can take 30–60 s; subsequent loads are cached |
+
+---
